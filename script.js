@@ -56,3 +56,38 @@ console.log(`Modified array1 is ${arrayModified}`);
 
 const arrayModified2 = removeEvenNumber(array2);
 console.log(`Modified array2 is ${arrayModified2}`);
+
+// _____________________________________
+
+const shoppingBasket =[];
+const stockProducts = [
+    {
+        name: 'Hat',
+        price: 22.99,
+        stock: 12
+    },
+
+    {
+        name:"T-shirt",
+        price: 30.99,
+        stock: 40
+    }
+];
+
+function moveFromStockToBascket(productName)
+{
+    for (const product of stockProducts)
+    {
+        if(product.name === productName)
+        {
+            shoppingBasket.push({name: product.name, quantity:1});
+            product.stock -=1;
+        }
+
+    }        
+}
+console.log(`Current stock`, stockProducts);
+console.log(`Shopping bascket:`, shoppingBasket);
+moveFromStockToBascket('Hat');
+console.log(`Current stock`, stockProducts);
+console.log(`Shopping bascket:`, shoppingBasket);
