@@ -91,3 +91,21 @@ console.log(`Shopping bascket:`, shoppingBasket);
 moveFromStockToBascket('Hat');
 console.log(`Current stock`, stockProducts);
 console.log(`Shopping bascket:`, shoppingBasket);
+
+
+// FUNCTII ANONIME
+const printHello = function() {
+    console.log('hello');
+};
+printHello();
+
+function mapArray(ArrayToMap, mappingFunction) {
+    const newArray = [];
+    for (const element of ArrayToMap) {
+        let mappingFunctionResult = mappingFunction(element)
+        newArray.push(mappingFunctionResult);
+    }
+    return newArray
+}
+const arrayToMap = [1, 2, 3];
+const doubleArray = mapArray(arrayToMap, function(el) { return el*2}; )
