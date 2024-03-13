@@ -38,4 +38,21 @@ arrayHasElement(array1,valueToCheck2);
 arrayHasElement(['ala', 'bala', 'portocala'], 'ala');          //alta forma de scriere, nu trebuie intotdeauna ca parametrii sa fie variabile
 
 
-//
+//functie cu paramtri si return
+ function removeEvenNumber(arrayToModify)
+ {  const newArray=[];
+
+    for (const num of arrayToModify)
+    {
+        if(num%2>0)
+            {newArray.push(num);  }
+    }
+
+    return newArray;
+}
+
+const arrayModified = removeEvenNumber(array1);
+console.log(`Modified array1 is ${arrayModified}`);
+
+const arrayModified2 = removeEvenNumber(array2);
+console.log(`Modified array2 is ${arrayModified2}`);
